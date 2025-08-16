@@ -1,7 +1,14 @@
+using BrainFlow.Data;
+using BrainFlow.UI.Web.Helpers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<HttpClient>();
+builder.Services.AddScoped<AcessaDados>();
+builder.Services.AddScoped<EmailSender>();
 
 var app = builder.Build();
 
@@ -24,6 +31,11 @@ app.MapAreaControllerRoute(
     name: "AdminArea",
     areaName: "Admin",
     pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
+
+app.MapAreaControllerRoute(
+    name: "AFiliadoArea",
+    areaName: "Afiliado",
+    pattern: "Afiliado/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",

@@ -12,10 +12,29 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Areas\Afiliado\Controllers\" />
+    <Folder Include="Areas\Afiliado\Data\" />
+    <Folder Include="Areas\Afiliado\Models\" />
+    <Folder Include="Areas\Afiliado\Views\" />
+    <Folder Include="wwwroot\images\banners\" />
+    <Folder Include="wwwroot\images\logos\" />
+    <Folder Include="wwwroot\images\cursos\" />
+    <Folder Include="wwwroot\videos\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Dapper" Version="2.1.66" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    <PackageReference Include="PayPal" Version="1.9.1" />
+    <PackageReference Include="PayPalCheckoutSdk" Version="1.0.4" />
+    <PackageReference Include="PayPalHttp" Version="1.0.1" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="10.5.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BrainFlow.Data\BrainFlow.Data.csproj" />
+    <ProjectReference Include="..\BrainFlow.Repository\BrainFlow.Repository.csproj" />
   </ItemGroup>
 
 </Project>
