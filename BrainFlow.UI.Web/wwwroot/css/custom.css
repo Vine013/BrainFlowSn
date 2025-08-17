@@ -1,0 +1,139 @@
+﻿/*
+ * custom.css
+ * Arquivo de estilo personalizado para a plataforma BrainFlow.
+ *
+ * Contém variáveis CSS para a paleta de cores e classes utilitárias
+ * para tipografia, fundos e botões.
+ */
+
+:root {
+    /* Cores Primárias */
+    --primary: #00B2A3;
+    --primary-rgb: 0, 178, 163;
+    /* Cores Secundárias */
+    --secondary: #a400b2;
+    --secondary-rgb: 164, 0, 178;
+    /* Cores Neutras */
+    --neutral-dark: #212529; /* Similar ao cinza escuro do Bootstrap */
+    --neutral-medium: #6c757d;
+    --neutral-light: #f8f9fa;
+    --white: #FFFFFF;
+    /* Cores de Estado */
+    --success: #28A745;
+    --error: #DC3545;
+    --warning: #FFC107;
+}
+
+/* Utilitários de Cores de Texto (Texto) */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.text-neutral-dark {
+    color: var(--neutral-dark) !important;
+}
+
+.text-neutral-medium {
+    color: var(--neutral-medium) !important;
+}
+
+.text-neutral-light {
+    color: var(--neutral-light) !important;
+}
+
+.text-success {
+    color: var(--success) !important;
+}
+
+.text-error {
+    color: var(--error) !important;
+}
+
+.text-warning {
+    color: var(--warning) !important;
+}
+
+/* Utilitários de Cores de Fundo (Background) */
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.bg-neutral-dark {
+    background-color: var(--neutral-dark) !important;
+}
+
+.bg-neutral-medium {
+    background-color: var(--neutral-medium) !important;
+}
+
+.bg-neutral-light {
+    background-color: var(--neutral-light) !important;
+}
+
+.bg-success {
+    background-color: var(--success) !important;
+}
+
+.bg-error {
+    background-color: var(--error) !important;
+}
+
+.bg-warning {
+    background-color: var(--warning) !important;
+}
+
+/* Estilo para Botões */
+.btn-primary, .btn-primary:active {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    box-shadow: 0 0.5rem 1rem rgba(var(--primary-rgb), 0.15) !important;
+}
+
+    .btn-primary:hover, .btn-primary:focus {
+        background-color: #008f82;
+        border-color: #008f82;
+        color: var(--white);
+    }
+
+.btn-secondary, .btn-secondary:active {
+    background-color: var(--secondary);
+    color: var(--white);
+    border-color: var(--secondary);
+    box-shadow: 0 0.5rem 1rem rgba(var(--secondary-rgb), 0.15) !important;
+}
+
+    .btn-secondary:hover, .btn-secondary:focus {
+        background-color: #7b008d;
+        border-color: #7b008d;
+        color: var(--white);
+    }
+
+/*  Estilo para Botões Outline */
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+    .btn-outline-primary:hover, .btn-outline-primary:focus {
+        background-color: var(--primary);
+        color: var(--white);
+    }
+
+.btn-outline-secondary {
+    color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+    .btn-outline-secondary:hover, .btn-outline-secondary:focus {
+        background-color: var(--secondary);
+        color: var(--white);
+    }

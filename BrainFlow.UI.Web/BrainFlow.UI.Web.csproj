@@ -7,15 +7,57 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.min.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.min.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-utilities.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-utilities.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-utilities.min.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-utilities.min.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.min.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap.min.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap.min.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap.rtl.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap.rtl.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap.rtl.min.css" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\css\bootstrap.rtl.min.css.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\js\bootstrap.esm.js" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\js\bootstrap.esm.js.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\js\bootstrap.esm.min.js" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\js\bootstrap.esm.min.js.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\js\bootstrap.js" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\js\bootstrap.js.map" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\js\bootstrap.min.js" />
+    <Content Remove="C:\Users\vfgsa\.nuget\packages\bootstrap\5.3.7\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\" />
     <Folder Include="Areas\Afiliado\Controllers\" />
-    <Folder Include="Areas\Afiliado\Data\" />
     <Folder Include="Areas\Afiliado\Models\" />
-    <Folder Include="Areas\Afiliado\Views\" />
     <Folder Include="wwwroot\images\banners\" />
     <Folder Include="wwwroot\images\logos\" />
     <Folder Include="wwwroot\images\cursos\" />
@@ -23,8 +65,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AdminLTE" Version="2.4.0" />
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="bootstrap" Version="5.3.7" />
     <PackageReference Include="Dapper" Version="2.1.66" />
+    <PackageReference Include="FontAwesome" Version="4.7.0" />
+    <PackageReference Include="jQuery.InputMask" Version="5.0.9" />
+    <PackageReference Include="jQuery.Validation" Version="1.21.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
     <PackageReference Include="PayPal" Version="1.9.1" />
     <PackageReference Include="PayPalCheckoutSdk" Version="1.0.4" />
@@ -34,7 +81,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BrainFlow.Data\BrainFlow.Data.csproj" />
+    <ProjectReference Include="..\BrainFlow.Model\BrainFlow.Model.csproj" />
     <ProjectReference Include="..\BrainFlow.Repository\BrainFlow.Repository.csproj" />
+    <ProjectReference Include="..\BrainFlow.Service\BrainFlow.Service.csproj" />
   </ItemGroup>
 
 </Project>

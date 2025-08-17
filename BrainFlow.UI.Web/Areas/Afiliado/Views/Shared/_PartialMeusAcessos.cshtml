@@ -1,0 +1,40 @@
+﻿@using BrainFlow.UI.Web.Helpers
+
+
+<aside class="app-sidebar bg-gray-dark shadow">
+    <div class="sidebar-brand">
+        <a href="#" class="brand-link">
+            <img src="~/images/logos/brainflow_logo.svg" alt="BrainFlow Logo" class="brand-image" style="opacity: .8">
+        </a>
+    </div>
+    <div class="sidebar-wrapper overflow-hidden">
+        <div>
+            <nav class="mt-1">
+                <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index", "Home", new { area = "" })" class="nav-link">
+                            <i class="nav-icon fas fa-house-user text-white"></i>
+                            <p class="text-white">Home</p>
+                        </a>
+                    </li>
+
+                    @if (AcessoSistema.IsAdmin(User))
+                    {
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Dashboard", new { area = "Admin" })" class="nav-link">
+                                <i class="nav-icon fas fa-user-lock text-white"></i>
+                                <p class="text-white">Dashboard Admin</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("AprovarAfiliados", "Afiliado", new { area = "Admin" })" class="nav-link">
+                                <i class="nav-icon fas fa-user-check text-white"></i>
+                                <p class="text-white">Aprovar Afiliados</p>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>
+</aside>
