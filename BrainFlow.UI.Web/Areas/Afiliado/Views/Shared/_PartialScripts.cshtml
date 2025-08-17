@@ -1,0 +1,81 @@
+﻿<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+@* AdminLTE, FontAwesome e outros plugins *@
+<script src="~/lib/admin-lte/dist/js/adminlte.min.js"></script>
+<script src="~/lib/admin-lte/plugins/fontawesome-free/js/all.min.js"></script>
+<script src="~/lib/admin-lte/plugins/inputmask/jquery.inputmask.min.js"></script>
+<script src="~/lib/admin-lte/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/lib/admin-lte/plugins/toastr/toastr.min.js"></script>
+<script src="~/lib/admin-lte/plugins/select2/js/select2.full.min.js"></script>
+<script src="~/lib/admin-lte/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script src="~/lib/admin-lte/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="~/lib/admin-lte/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="~/lib/admin-lte/plugins/moment/moment.min.js"></script>
+<script src="~/lib/admin-lte/plugins/moment/moment-with-locales.min.js"></script>
+<script src="~/lib/bootstrap-fileinput/js/fileinput.min.js"></script>
+<script src="~/lib/bootstrap-fileinput/js/locales/pt-br.js"></script>
+<script src="~/lib/bootstrap-fileinput/js/plugins/buffer.min.js"></script>
+<script src="~/lib/bootstrap-fileinput/js/plugins/piexif.min.js"></script>
+<script src="~/lib/bootstrap-fileinput/js/plugins/sortable.min.js"></script>
+
+
+<script>
+    $(function () {
+        // Funções para mostrar e esconder o loader
+        function showLoader() {
+            $('.loader').show();
+        }
+
+        function hideLoader() {
+            $('.loader').hide();
+        }
+
+        // Loader para navegação
+        $('a:not([target="_blank"]):not([href^="#"]):not([data-bs-toggle="modal"])').on('click', function () {
+            showLoader();
+        });
+
+        // Loader ao enviar formulários
+        $('form').on('submit', function () {
+            if ($(this).valid()) {
+                showLoader();
+            }
+        });
+
+        // Loader para chamadas AJAX
+        $(document).ajaxStart(showLoader);
+        $(document).ajaxStop(hideLoader);
+
+        // Garante que o loader desapareça ao fechar qualquer modal
+        $(document).on('hidden.bs.modal', hideLoader);
+
+        // Funções de inicialização
+        $('input').attr('autocomplete', 'off');
+        $('.select2').select2();
+
+        // Máscaras de input
+        $('.telefone-celular').inputmask('(99) 99999-9999');
+        $('.cpf').inputmask('999.999.999-99');
+        $('.cep').inputmask('99999-999');
+        $('.rg').inputmask('99.999.999-9');
+
+        // Scroll top
+        $(window).scroll(function () {
+            if ($(this).scrollTop() != 0) {
+                $('.top-page').fadeIn();
+            } else {
+                $('.top-page').fadeOut();
+            }
+        });
+
+        $('.top-page').click(function () {
+            $('body,html').animate({ scrollTop: 0 }, 800);
+        });
+
+        // Tooltip e popover
+        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="popover"]').popover();
+    });
+</script>

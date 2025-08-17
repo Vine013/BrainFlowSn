@@ -1,5 +1,9 @@
 using BrainFlow.Data;
+using BrainFlow.Repository.Interfaces;
+using BrainFlow.Repository;
 using BrainFlow.UI.Web.Helpers;
+using BrainFlow.Service.Interfaces;
+using BrainFlow.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,13 +14,19 @@ builder.Services.AddScoped<HttpClient>();
 builder.Services.AddScoped<AcessaDados>();
 builder.Services.AddScoped<EmailSender>();
 
+// Registrando as interfaces e suas implementações dos Repositórios
+builder.Services.AddScoped<IUsuarioREP, UsuarioREP>();
+builder.Services.AddScoped<IUsuarioLoginREP, UsuarioLoginREP>();
+
+// Registrando o serviço de autenticação
+builder.Services.AddScoped<IAutenticacaoService, AutenticacaoService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
