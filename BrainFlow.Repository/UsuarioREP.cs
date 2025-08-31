@@ -37,14 +37,14 @@ namespace BrainFlow.Repository
                 {
                     con.Open();
                     
-                    var query = @"SELECT CD_USUARIO, 
-                                         CD_TIPO_USUARIO, 
-                                         NO_USUARIO, 
-                                         TX_EMAIL, 
-                                         TX_TELEFONE, 
-                                         DT_CADASTRO, 
-                                         DT_ALTERACAO, 
-                                         SN_ATIVO
+                    var query = @"SELECT CD_USUARIO      AS CdUsuario,
+                                         CD_TIPO_USUARIO AS CdTipoUsuario,
+                                         NO_USUARIO      AS NoUsuario,
+                                         TX_EMAIL        AS TxEmail,
+                                         TX_TELEFONE     AS TxTelefone,
+                                         DT_CADASTRO     AS DtCadastro,
+                                         DT_ALTERACAO    AS DtAlteracao,
+                                         SN_ATIVO        AS SnAtivo
                                     FROM USUARIO
                                    WHERE CD_USUARIO = @cdUsuario";
 
@@ -67,33 +67,32 @@ namespace BrainFlow.Repository
         /// <returns></returns>
         public async Task<UsuarioMOD> BuscarPorEmail(string txEmail)
         {
-            UsuarioMOD usuario = new UsuarioMOD();
-
             using (var con = _acessaDados.GetConnection())
             {
                 try
                 {
                     con.Open();
 
-                    var query = @"SELECT CD_USUARIO, 
-                                         CD_TIPO_USUARIO, 
-                                         NO_USUARIO, 
-                                         TX_EMAIL, 
-                                         TX_TELEFONE, 
-                                         DT_CADASTRO, 
-                                         DT_ALTERACAO, 
-                                         SN_ATIVO
+                    var query = @"SELECT CD_USUARIO      AS CdUsuario,
+                                         CD_TIPO_USUARIO AS CdTipoUsuario,
+                                         NO_USUARIO      AS NoUsuario,
+                                         TX_EMAIL        AS TxEmail,
+                                         TX_TELEFONE     AS TxTelefone,
+                                         DT_CADASTRO     AS DtCadastro,
+                                         DT_ALTERACAO    AS DtAlteracao,
+                                         SN_ATIVO        AS SnAtivo
                                     FROM USUARIO
                                    WHERE TX_EMAIL = @txEmail";
 
-                    usuario = await con.QueryFirstOrDefaultAsync<UsuarioMOD>(query, new { txEmail });
+
+                    var usuario = await con.QueryFirstOrDefaultAsync<UsuarioMOD>(query, new { txEmail });
+                    return usuario;
                 }
-                catch (SqlException ex)
+                 catch (SqlException ex)
                 {
                     throw new Exception("Erro ao buscar usuário por e-mail.", ex);
                 }
             }
-            return usuario;
         }
         #endregion
 

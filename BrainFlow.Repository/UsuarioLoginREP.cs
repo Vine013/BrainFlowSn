@@ -37,11 +37,11 @@ namespace BrainFlow.Repository
                 {
                     con.Open();
 
-                    var query = @"SELECT UL.CD_LOGIN,
-                                    	 UL.CD_USUARIO,
-                                    	 UL.DT_ALTERACAO,
-                                    	 UL.TX_SENHA_HASH,
-                                    	 UL.TX_TOKEN
+                    var query = @"SELECT UL.CD_LOGIN      AS CdLogin,
+                                    	 UL.CD_USUARIO    AS CdUsuario,
+                                    	 UL.DT_ALTERACAO  AS DtAlteracao,
+                                    	 UL.TX_SENHA_HASH AS TxSenhaHash,
+                                    	 UL.TX_TOKEN      AS TxToken
                                     FROM USUARIO_LOGIN UL
                                    WHERE UL.CD_USUARIO = @cdUsuario";
 

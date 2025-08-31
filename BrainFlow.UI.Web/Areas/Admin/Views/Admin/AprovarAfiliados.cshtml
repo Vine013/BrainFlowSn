@@ -1,0 +1,42 @@
+﻿@model IEnumerable<BrainFlow.Model.AfiliadoMOD>
+
+@{
+    ViewData["Title"] = "Aprovar Afiliados";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.MainTitle = "Aprovação de Afiliados";
+    ViewBag.SubTitle = "Gerencie os pedidos de afiliação.";
+}
+
+<div class="card shadow-sm">
+    <div class="card-header">
+        <h3 class="card-title">Afiliados Pendentes</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Nome da Empresa</th>
+                    <th>CNPJ/CPF</th>
+                    <th>Solicitação</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var afiliado in Model)
+                {
+                    <tr>
+                        <td>@afiliado.NoRazaoSocial</td>
+                        <td>@afiliado.NrCpfCnpj</td>
+                        <td>@afiliado.DtSolicitacao.ToShortDateString()</td>
+                        <td>
+                            <form asp-controller="Admin" asp-action="Aprovar" method="post" onsubmit="return confirm('Tem certeza que deseja aprovar este afiliado?');">
+                                <input type="hidden" name="id" value="@afiliado.CdAfiliado" />
+                                <button type="submit" class="btn btn-sm btn-success">Aprovar</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

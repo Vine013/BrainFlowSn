@@ -24,6 +24,11 @@
     --warning: #FFC107;
 }
 
+*, body {
+    margin: 0;
+    padding: 0;
+}
+
 /* Utilitários de Cores de Texto (Texto) */
 .text-primary {
     color: var(--primary) !important;

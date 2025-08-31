@@ -1,5 +1,5 @@
 ﻿@using BrainFlow.UI.Web.Helpers
-
+@using System.Security.Claims
 
 <aside class="app-sidebar bg-gray-dark shadow">
     <div class="sidebar-brand">
@@ -14,22 +14,24 @@
                     <li class="nav-item">
                         <a href="@Url.Action("Index", "Home", new { area = "" })" class="nav-link">
                             <i class="nav-icon fas fa-house-user text-white"></i>
-                            <p class="text-white">Home</p>
+                            <p class="text-white">Início</p>
                         </a>
                     </li>
-
                     @if (AcessoSistema.IsAdmin(User))
                     {
                         <li class="nav-item">
-                            <a href="@Url.Action("Index", "Dashboard", new { area = "Admin" })" class="nav-link">
-                                <i class="nav-icon fas fa-user-lock text-white"></i>
-                                <p class="text-white">Dashboard Admin</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="@Url.Action("AprovarAfiliados", "Afiliado", new { area = "Admin" })" class="nav-link">
+                            <a href="@Url.Action("AprovarAfiliados", "Admin", new { area = "Admin" })" class="nav-link">
                                 <i class="nav-icon fas fa-user-check text-white"></i>
                                 <p class="text-white">Aprovar Afiliados</p>
+                            </a>
+                        </li>
+                    }
+                    @if (AcessoSistema.IsAfiliado(User))
+                    {
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Afiliado", new { area = "Afiliado" })" class="nav-link">
+                                <i class="nav-icon fas fa-chart-line text-white"></i>
+                                <p class="text-white">Dashboard Afiliado</p>
                             </a>
                         </li>
                     }

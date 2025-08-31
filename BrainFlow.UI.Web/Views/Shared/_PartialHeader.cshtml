@@ -1,0 +1,63 @@
+﻿@using BrainFlow.UI.Web.Helpers
+@using System.Security.Claims
+
+@{
+    string nomeCompleto = User.FindFirst(ClaimTypes.Name)?.Value ?? "Usuário";
+    string primeiroNome = nomeCompleto.Split(' ')[0];
+    string role = User.FindFirst(ClaimTypes.Role)?.Value ?? string.Empty;
+}
+
+<header class="app-header bg-primary navbar navbar-expand navbar-light navbar-white shadow-sm">
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-white" data-lte-toggle="sidebar" href="#" role="button">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a asp-action="Index" asp-controller="Home" class="nav-link text-white">Início</a>
+            </li>
+            @if (User.Identity.IsAuthenticated)
+            {
+                if (role == "Admin" || role == "Afiliado")
+                {
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a asp-area="Afiliado" asp-controller="Home" asp-action="Index" class="nav-link text-white">Painel Afiliado</a>
+                    </li>
+                }
+                if (role == "Admin")
+                {
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="nav-link text-white">Painel Admin</a>
+                    </li>
+                }
+            }
+        </ul>
+        <ul class="navbar-nav ms-auto">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-white" data-bs-toggle="dropdown" href="#">
+                        <i class="fas fa-user-circle"></i> Olá, @primeiroNome
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                        <span class="dropdown-item dropdown-header">@primeiroNome</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="@Url.Action("Sair", "Login")" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt me-2"></i> Sair
+                        </a>
+                    </div>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item">
+                    <a href="@Url.Action("EfetuarLogin", "Login")" class="nav-link text-white">
+                        <i class="fas fa-sign-in-alt me-2"></i> Login
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</header>

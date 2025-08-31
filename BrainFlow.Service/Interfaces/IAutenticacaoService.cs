@@ -17,6 +17,6 @@ namespace BrainFlow.Service.Interfaces
         /// <param name="usuario"></param>
         /// <param name="senha"></param>
         /// <returns>Retorna o código do novo usuário.</returns>
-        Task<int> CadastrarUsuario(UsuarioMOD usuario, string senha);
+        Task<int> CadastrarUsuarioComum(UsuarioMOD usuario, string senha);
     }
 }

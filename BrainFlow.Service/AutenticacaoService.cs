@@ -55,17 +55,20 @@ namespace BrainFlow.Service
         }
         #endregion
 
-        #region CadastrarUsuario
+        #region CadastrarUsuarioComum
         /// <summary>
         /// Realiza o cadastro de um novo usuário comum.
         /// </summary>
         /// <param name="usuario"></param>
         /// <param name="senha"></param>
         /// <returns></returns>
-        public async Task<int> CadastrarUsuario(UsuarioMOD usuario, string senha)
+        public async Task<int> CadastrarUsuarioComum(UsuarioMOD usuario, string senha)
         {
             string senhaHash = BCrypt.Net.BCrypt.HashPassword(senha);
 
+            usuario.SnAtivo = "S";
+            usuario.DtCadastro = DateTime.Now;
+            usuario.CdTipoUsuario = 3;
             int cdUsuario = await _usuarioREP.Cadastrar(usuario);
 
             if (cdUsuario != 0)
@@ -76,7 +79,6 @@ namespace BrainFlow.Service
                     TxSenhaHash = senhaHash,
                     DtAlteracao = DateTime.Now
                 };
-
                 await _usuarioLoginREP.Cadastrar(usuarioLogin);
 
                 return cdUsuario;
